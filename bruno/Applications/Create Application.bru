@@ -1,0 +1,31 @@
+meta {
+  name: Create Application
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/applications
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "serviceType": "Birth Certificate",
+    "applicantName": "Swetha K S",
+    "phoneNumber": "9876543210",
+    "address": "House No 123, Gramaswara Street",
+    "dateOfBirth": "2000-01-15",
+    "gender": "Female",
+    "applicationData": {
+      "hospitalName": "City Hospital",
+      "placeOfBirth": "Kochi"
+    },
+    "status": "Draft"
+  }
+}
+
+vars:pre-request {
+  baseUrl: http://localhost:5000/
+}

@@ -3,6 +3,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 
 const connectDB = require("./config/db");
+const applicationRoutes = require("./routes/applicationRoutes");
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ app.get("/", (req, res) => {
         message: "Gramaswara Backend API is running"
     });
 });
+
+app.use("/api/applications", applicationRoutes);
 
 const PORT = process.env.PORT || 5000;
 

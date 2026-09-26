@@ -1,0 +1,21 @@
+meta {
+  name: Update Application
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/api/applications/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id: REPLACE_WITH_APPLICATION_ID
+}
+
+body:json {
+  {
+    "status": "Submitted"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Gramaswara Backend",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
